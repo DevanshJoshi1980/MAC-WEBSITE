@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		header{
+			height: 80px;
+			width: 100%;
+			background-color: red;
+		}
+		.logo{
+			float: left;
+			line-height: 80px;
+		}
+		nav{
+			float: right;
+			line-height: 80px;
+		}
+		#check{
+			float: right;
+			display: none;
+		}
+		.checkbtn{
+			float: right;
+			font-size: 30px;
+			display: none;
+		}
+		nav ul{
+			display: inline-block;
+		}
+		nav ul li{
+			display: inline-block;
+		}
+		nav ul li a{
+			text-decoration: none;
+			padding: 5px;
+			font-size: 30px;
+		}
+		@media(max-width:876px){
+			.checkbtn{
+				display: block;
+			}
+			nav ul{
+				position: fixed;
+				transition: 0.5s all;
+				top: 80px;
+				left: -100%;
+				width: 100%;
+				height: 500px;
+				background-color: black;
+				color: darkred;
+				text-align: center;
+			}
+			nav ul li{
+				display: block;
+				text-align: center;
+			}
+			nav ul li a{
+				color: blueviolet;
+			}
+			#check:checked ~ ul{
+				left: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+<header>
+	<div class="logo">hk classes</div>
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+		<ul>
+			<li> <a href="#">home</a> </li>
+			<li> <a href="#">blog</a> </li>
+			<li> <a href="#">service</a> </li>
+			<li> <a href="#">contact</a> </li>
+		</ul>
+	</nav>
+</header>
+</body>
+</html>
